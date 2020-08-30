@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import QuizQuestion from './QuizQuestion'
 import QuizEnd from './QuizEnd'
-import { resetHistory } from 'sinon'
 
 let quizData = require('./quiz_data.json')
 
