@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import QuizQuestion from './QuizQuestion'
 import QuizEnd from './QuizEnd'
+import { resetHistory } from 'sinon'
 
 let quizData = require('./quiz_data.json')
 
@@ -11,6 +12,12 @@ class Quiz extends Component {
         super(props)
         this.state = { quiz_position: 1 }
     }
+
+    showNextQuestion() {
+        this.setState((state) => {
+          return { quiz_position: state.quiz_position + 1 }
+        })
+      }
 
     render() {
         const isQuizEnd = (this.state.quiz_position - 1) === quizData.quiz_questions.length
