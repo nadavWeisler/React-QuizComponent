@@ -7,6 +7,7 @@ class QuizQuestion extends Component {
           this.props.showNextQuestionHandler()
         }
     }
+
     render() {
         return (
             <main>
